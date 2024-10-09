@@ -25,23 +25,18 @@ def calcular_media(numeros):
 import pytest
 from calcular_media import calcular_media
 
-
 def test_calcular_media_inteiros():
     assert calcular_media([1, 2, 3, 4, 5]) == 3.0
-
 
 def test_calcular_media_floats():
     assert pytest.approx(calcular_media([10.5, 20.3, 30.7, 40.1]), 0.01) == 25.4
 
-
 def test_calcular_media_unico_elemento():
     assert calcular_media([100]) == 100.0
-
 
 def test_calcular_media_lista_vazia():
     with pytest.raises(ValueError):
         calcular_media([])
-
 
 def test_calcular_media_elementos_nao_numericos():
     with pytest.raises(TypeError):
