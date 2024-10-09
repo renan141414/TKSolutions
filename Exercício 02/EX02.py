@@ -13,15 +13,18 @@ resultado = [
     for linha in matriz
 ]
 
+# Função para exibir uma matriz formatada
+def exibir_matriz(matriz, titulo="Matriz"):
+    print(f"\n{titulo}:")
+    for linha in matriz:
+        print(" | ".join(f"{elemento:^5}" for elemento in linha))
+
 # Exibindo a matriz original
-print("Matriz original:")
-for linha in matriz:
-    print(linha)
+exibir_matriz(matriz, "Matriz Original")
 
 # Exibindo o escalar
 print(f"\nEscalar: {escalar}")
 
-# Exibindo o resultado
-print("\nResultado da multiplicação:")
-for linha in resultado:
-    print(linha)
+# Exibindo o resultado da multiplicação
+exibir_matriz(resultado, "Resultado da Multiplicação")
+
