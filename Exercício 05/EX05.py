@@ -1,43 +1,85 @@
-import json
+import csv
+import os
 
-# Criando um dicionário com dados de cinco alunos
-alunos = {
-    "alunos": [
-        {"nome": "Maria Silva", "nota": 8.5},
-        {"nome": "João Santos", "nota": 7.8},
-        {"nome": "Ana Oliveira", "nota": 9.2},
-        {"nome": "Pedro Souza", "nota": 6.9},
-        {"nome": "Carla Ferreira", "nota": 8.7}
-    ]
-}
+# Nome do arquivo CSV
+nome_arquivo = "pessoas.csv"
 
-# Nome do arquivo JSON
-nome_arquivo = "alunos.json"
+# Função para criar um arquivo CSV de exemplo, se não existir
+def criar_arquivo_exemplo():
+    if not os.path.exists(nome_arquivo):
+        with open(nome_arquivo, 'w', newline='', encoding='utf-8') as arquivo:
+            escritor = csv.writer(arquivo)
+            escritor.writerow(['Nome', 'Idade', 'Cidade'])
+            escritor.writerows([
+                ['Ana Silva', '28', 'São Paulo'],
+                ['Carlos Oliveira', '35', 'Rio de Janeiro'],
+                ['Maria Santos', '42', 'Belo Horizonte'],
+                ['João Pereira', '31', 'Porto Alegre'],
+                ['Beatriz Lima', '39', 'Curitiba']
+            ])
+        print(f"Arquivo de exemplo '{nome_arquivo}' criado.")
 
-# Escrevendo os dados no arquivo JSON
-try:
-    with open(nome_arquivo, 'w', encoding='utf-8') as arquivo:
-        json.dump(alunos, arquivo, ensure_ascii=False, indent=2)
-    print(f"Dados gravados com sucesso no arquivo '{nome_arquivo}'.")
-
-except IOError as e:
-    print(f"Erro ao escrever no arquivo: {e}")
-
-# Lendo e exibindo o conteúdo do arquivo JSON para verificação
-try:
+# Função para ler o arquivo CSV
+def ler_csv():
+    pessoas = []
     with open(nome_arquivo, 'r', encoding='utf-8') as arquivo:
-        dados_lidos = json.load(arquivo)
+        leitor = csv.DictReader(arquivo)
+        for linha in leitor:
+            pessoas.append(linha)
+    return pessoas
 
-    print("\nConteúdo do arquivo JSON:")
-    print(json.dumps(dados_lidos, ensure_ascii=False, indent=2))
+# Função para exibir as pessoas
+def exibir_pessoas(pessoas):
+    for i, pessoa in enumerate(pessoas, 1):
+        print(f"{i}. {pessoa['Nome']} - {pessoa['Idade']} anos - {pessoa.get('Cidade', 'N/A')}")
 
-    print("\nDados dos alunos:")
-    for aluno in dados_lidos['alunos']:
-        print(f"Nome: {aluno['nome']}, Nota: {aluno['nota']}")
+# Função para atualizar a idade
+def atualizar_idade(pessoas):
+    exibir_pessoas(pessoas)
+    try:
+        indice = int(input("\nDigite o número da pessoa que deseja atualizar: ")) - 1
+        if 0 <= indice < len(pessoas):
+            nova_idade = input(f"Digite a nova idade para {pessoas[indice]['Nome']}: ")
+            pessoas[indice]['Idade'] = nova_idade
+            print("Idade atualizada com sucesso.")
+        else:
+            print("Número inválido.")
+    except ValueError:
+        print("Por favor, digite um número válido.")
 
-except FileNotFoundError:
-    print(f"Erro: O arquivo '{nome_arquivo}' não foi encontrado.")
-except json.JSONDecodeError:
-    print(f"Erro: O arquivo '{nome_arquivo}' não contém um JSON válido.")
-except Exception as e:
-    print(f"Ocorreu um erro inesperado: {e}")
+# Função para salvar as alterações no arquivo CSV
+def salvar_csv(pessoas):
+    campos = pessoas[0].keys()  # Pegando os campos do primeiro registro
+    with open(nome_arquivo, 'w', newline='', encoding='utf-8') as arquivo:
+        escritor = csv.DictWriter(arquivo, fieldnames=campos)
+        escritor.writeheader()
+        escritor.writerows(pessoas)
+    print(f"Alterações salvas no arquivo '{nome_arquivo}'.")
+
+# Programa principal
+def main():
+    criar_arquivo_exemplo()
+    while True:
+        print("\n--- Gerenciador de Idades ---")
+        print("1. Exibir pessoas")
+        print("2. Atualizar idade")
+        print("3. Sair")
+
+        escolha = input("Escolha uma opção: ")
+
+        if escolha == '1':
+            pessoas = ler_csv()
+            exibir_pessoas(pessoas)
+        elif escolha == '2':
+            pessoas = ler_csv()
+            atualizar_idade(pessoas)
+            salvar_csv(pessoas)
+        elif escolha == '3':
+            print("Programa encerrado.")
+            break
+        else:
+            print("Opção inválida. Tente novamente.")
+
+if __name__ == "__main__":
+    main()
+
