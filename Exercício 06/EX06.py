@@ -4,7 +4,6 @@ import os
 # Nome do arquivo CSV
 nome_arquivo = "pessoas.csv"
 
-
 # Função para criar um arquivo CSV de exemplo, se não existir
 def criar_arquivo_exemplo():
     if not os.path.exists(nome_arquivo):
@@ -20,7 +19,6 @@ def criar_arquivo_exemplo():
             ])
         print(f"Arquivo de exemplo '{nome_arquivo}' criado.")
 
-
 # Função para ler o arquivo CSV
 def ler_csv():
     pessoas = []
@@ -30,12 +28,10 @@ def ler_csv():
             pessoas.append(linha)
     return pessoas
 
-
 # Função para exibir as pessoas
 def exibir_pessoas(pessoas):
     for i, pessoa in enumerate(pessoas, 1):
         print(f"{i}. {pessoa['Nome']} - {pessoa['Idade']} anos - {pessoa.get('Cidade', 'N/A')}")
-
 
 # Função para atualizar a idade
 def atualizar_idade(pessoas):
@@ -51,26 +47,18 @@ def atualizar_idade(pessoas):
     except ValueError:
         print("Por favor, digite um número válido.")
 
-
 # Função para salvar as alterações no arquivo CSV
 def salvar_csv(pessoas):
-    # Determinar todos os campos únicos presentes nos dados
-    campos = set()
-    for pessoa in pessoas:
-        campos.update(pessoa.keys())
-    campos = list(campos)
-
+    campos = pessoas[0].keys()  # Pegando os campos do primeiro registro
     with open(nome_arquivo, 'w', newline='', encoding='utf-8') as arquivo:
         escritor = csv.DictWriter(arquivo, fieldnames=campos)
         escritor.writeheader()
         escritor.writerows(pessoas)
     print(f"Alterações salvas no arquivo '{nome_arquivo}'.")
 
-
 # Programa principal
 def main():
     criar_arquivo_exemplo()
-
     while True:
         print("\n--- Gerenciador de Idades ---")
         print("1. Exibir pessoas")
@@ -91,7 +79,6 @@ def main():
             break
         else:
             print("Opção inválida. Tente novamente.")
-
 
 if __name__ == "__main__":
     main()
