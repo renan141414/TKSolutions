@@ -1,0 +1,24 @@
+{
+  "alunos": [
+    {
+      "nome": "Maria Silva",
+      "nota": 8.5
+    },
+    {
+      "nome": "João Santos",
+      "nota": 7.8
+    },
+    {
+      "nome": "Ana Oliveira",
+      "nota": 9.2
+    },
+    {
+      "nome": "Pedro Souza",
+      "nota": 6.9
+    },
+    {
+      "nome": "Carla Ferreira",
+      "nota": 8.7
+    }
+  ]
+}

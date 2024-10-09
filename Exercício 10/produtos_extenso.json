@@ -1,0 +1,406 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Objeto 1",
+      "categoria": "Livros",
+      "preco": 198.58,
+      "quantidade": 58,
+      "avaliacao": 4.1
+    },
+    {
+      "id": 2,
+      "nome": "Objeto 2",
+      "categoria": "Brinquedos",
+      "preco": 761.7,
+      "quantidade": 79,
+      "avaliacao": 4.3
+    },
+    {
+      "id": 3,
+      "nome": "Mercadoria 3",
+      "categoria": "Brinquedos",
+      "preco": 987.5,
+      "quantidade": 26,
+      "avaliacao": 3.5
+    },
+    {
+      "id": 4,
+      "nome": "Item 4",
+      "categoria": "Livros",
+      "preco": 764.52,
+      "quantidade": 40,
+      "avaliacao": 2.6
+    },
+    {
+      "id": 5,
+      "nome": "Objeto 5",
+      "categoria": "Livros",
+      "preco": 535.04,
+      "quantidade": 65,
+      "avaliacao": 3.8
+    },
+    {
+      "id": 6,
+      "nome": "Mercadoria 6",
+      "categoria": "Alimentos",
+      "preco": 360.32,
+      "quantidade": 45,
+      "avaliacao": 1.4
+    },
+    {
+      "id": 7,
+      "nome": "Artigo 7",
+      "categoria": "Alimentos",
+      "preco": 556.18,
+      "quantidade": 93,
+      "avaliacao": 4.0
+    },
+    {
+      "id": 8,
+      "nome": "Mercadoria 8",
+      "categoria": "Brinquedos",
+      "preco": 361.22,
+      "quantidade": 12,
+      "avaliacao": 4.8
+    },
+    {
+      "id": 9,
+      "nome": "Produto 9",
+      "categoria": "Alimentos",
+      "preco": 663.86,
+      "quantidade": 30,
+      "avaliacao": 3.0
+    },
+    {
+      "id": 10,
+      "nome": "Artigo 10",
+      "categoria": "Alimentos",
+      "preco": 301.54,
+      "quantidade": 99,
+      "avaliacao": 3.2
+    },
+    {
+      "id": 11,
+      "nome": "Item 11",
+      "categoria": "Roupas",
+      "preco": 619.8,
+      "quantidade": 68,
+      "avaliacao": 1.7
+    },
+    {
+      "id": 12,
+      "nome": "Objeto 12",
+      "categoria": "Livros",
+      "preco": 106.64,
+      "quantidade": 10,
+      "avaliacao": 3.6
+    },
+    {
+      "id": 13,
+      "nome": "Item 13",
+      "categoria": "Livros",
+      "preco": 808.02,
+      "quantidade": 96,
+      "avaliacao": 1.2
+    },
+    {
+      "id": 14,
+      "nome": "Produto 14",
+      "categoria": "Livros",
+      "preco": 973.53,
+      "quantidade": 80,
+      "avaliacao": 1.6
+    },
+    {
+      "id": 15,
+      "nome": "Objeto 15",
+      "categoria": "Móveis",
+      "preco": 935.54,
+      "quantidade": 12,
+      "avaliacao": 3.1
+    },
+    {
+      "id": 16,
+      "nome": "Item 16",
+      "categoria": "Roupas",
+      "preco": 968.5,
+      "quantidade": 69,
+      "avaliacao": 1.6
+    },
+    {
+      "id": 17,
+      "nome": "Item 17",
+      "categoria": "Alimentos",
+      "preco": 596.76,
+      "quantidade": 54,
+      "avaliacao": 2.8
+    },
+    {
+      "id": 18,
+      "nome": "Item 18",
+      "categoria": "Brinquedos",
+      "preco": 397.28,
+      "quantidade": 16,
+      "avaliacao": 3.3
+    },
+    {
+      "id": 19,
+      "nome": "Mercadoria 19",
+      "categoria": "Alimentos",
+      "preco": 460.91,
+      "quantidade": 7,
+      "avaliacao": 1.5
+    },
+    {
+      "id": 20,
+      "nome": "Objeto 20",
+      "categoria": "Livros",
+      "preco": 594.03,
+      "quantidade": 34,
+      "avaliacao": 2.1
+    },
+    {
+      "id": 21,
+      "nome": "Mercadoria 21",
+      "categoria": "Roupas",
+      "preco": 126.27,
+      "quantidade": 91,
+      "avaliacao": 4.9
+    },
+    {
+      "id": 22,
+      "nome": "Objeto 22",
+      "categoria": "Móveis",
+      "preco": 406.76,
+      "quantidade": 90,
+      "avaliacao": 2.3
+    },
+    {
+      "id": 23,
+      "nome": "Produto 23",
+      "categoria": "Móveis",
+      "preco": 484.69,
+      "quantidade": 22,
+      "avaliacao": 2.5
+    },
+    {
+      "id": 24,
+      "nome": "Produto 24",
+      "categoria": "Eletrônicos",
+      "preco": 140.28,
+      "quantidade": 18,
+      "avaliacao": 2.5
+    },
+    {
+      "id": 25,
+      "nome": "Produto 25",
+      "categoria": "Móveis",
+      "preco": 359.19,
+      "quantidade": 64,
+      "avaliacao": 1.4
+    },
+    {
+      "id": 26,
+      "nome": "Artigo 26",
+      "categoria": "Alimentos",
+      "preco": 704.36,
+      "quantidade": 83,
+      "avaliacao": 2.0
+    },
+    {
+      "id": 27,
+      "nome": "Mercadoria 27",
+      "categoria": "Brinquedos",
+      "preco": 721.62,
+      "quantidade": 86,
+      "avaliacao": 5.0
+    },
+    {
+      "id": 28,
+      "nome": "Produto 28",
+      "categoria": "Eletrônicos",
+      "preco": 836.21,
+      "quantidade": 65,
+      "avaliacao": 4.3
+    },
+    {
+      "id": 29,
+      "nome": "Mercadoria 29",
+      "categoria": "Brinquedos",
+      "preco": 668.48,
+      "quantidade": 59,
+      "avaliacao": 4.2
+    },
+    {
+      "id": 30,
+      "nome": "Item 30",
+      "categoria": "Roupas",
+      "preco": 906.8,
+      "quantidade": 7,
+      "avaliacao": 3.3
+    },
+    {
+      "id": 31,
+      "nome": "Mercadoria 31",
+      "categoria": "Alimentos",
+      "preco": 398.4,
+      "quantidade": 97,
+      "avaliacao": 2.1
+    },
+    {
+      "id": 32,
+      "nome": "Produto 32",
+      "categoria": "Móveis",
+      "preco": 466.85,
+      "quantidade": 86,
+      "avaliacao": 3.6
+    },
+    {
+      "id": 33,
+      "nome": "Produto 33",
+      "categoria": "Alimentos",
+      "preco": 272.97,
+      "quantidade": 11,
+      "avaliacao": 3.4
+    },
+    {
+      "id": 34,
+      "nome": "Item 34",
+      "categoria": "Brinquedos",
+      "preco": 57.52,
+      "quantidade": 25,
+      "avaliacao": 2.3
+    },
+    {
+      "id": 35,
+      "nome": "Objeto 35",
+      "categoria": "Brinquedos",
+      "preco": 46.34,
+      "quantidade": 99,
+      "avaliacao": 4.4
+    },
+    {
+      "id": 36,
+      "nome": "Produto 36",
+      "categoria": "Roupas",
+      "preco": 993.95,
+      "quantidade": 61,
+      "avaliacao": 2.0
+    },
+    {
+      "id": 37,
+      "nome": "Mercadoria 37",
+      "categoria": "Móveis",
+      "preco": 971.63,
+      "quantidade": 77,
+      "avaliacao": 2.1
+    },
+    {
+      "id": 38,
+      "nome": "Mercadoria 38",
+      "categoria": "Móveis",
+      "preco": 186.08,
+      "quantidade": 24,
+      "avaliacao": 2.8
+    },
+    {
+      "id": 39,
+      "nome": "Objeto 39",
+      "categoria": "Alimentos",
+      "preco": 77.5,
+      "quantidade": 34,
+      "avaliacao": 3.9
+    },
+    {
+      "id": 40,
+      "nome": "Item 40",
+      "categoria": "Livros",
+      "preco": 469.84,
+      "quantidade": 99,
+      "avaliacao": 1.2
+    },
+    {
+      "id": 41,
+      "nome": "Objeto 41",
+      "categoria": "Alimentos",
+      "preco": 304.58,
+      "quantidade": 63,
+      "avaliacao": 2.7
+    },
+    {
+      "id": 42,
+      "nome": "Produto 42",
+      "categoria": "Alimentos",
+      "preco": 984.1,
+      "quantidade": 35,
+      "avaliacao": 4.3
+    },
+    {
+      "id": 43,
+      "nome": "Produto 43",
+      "categoria": "Roupas",
+      "preco": 272.81,
+      "quantidade": 6,
+      "avaliacao": 1.9
+    },
+    {
+      "id": 44,
+      "nome": "Item 44",
+      "categoria": "Eletrônicos",
+      "preco": 409.07,
+      "quantidade": 64,
+      "avaliacao": 4.3
+    },
+    {
+      "id": 45,
+      "nome": "Item 45",
+      "categoria": "Alimentos",
+      "preco": 52.6,
+      "quantidade": 52,
+      "avaliacao": 2.6
+    },
+    {
+      "id": 46,
+      "nome": "Artigo 46",
+      "categoria": "Livros",
+      "preco": 100.91,
+      "quantidade": 33,
+      "avaliacao": 4.8
+    },
+    {
+      "id": 47,
+      "nome": "Item 47",
+      "categoria": "Alimentos",
+      "preco": 927.46,
+      "quantidade": 18,
+      "avaliacao": 4.6
+    },
+    {
+      "id": 48,
+      "nome": "Item 48",
+      "categoria": "Brinquedos",
+      "preco": 128.89,
+      "quantidade": 84,
+      "avaliacao": 1.2
+    },
+    {
+      "id": 49,
+      "nome": "Item 49",
+      "categoria": "Roupas",
+      "preco": 654.8,
+      "quantidade": 27,
+      "avaliacao": 4.0
+    },
+    {
+      "id": 50,
+      "nome": "Item 50",
+      "categoria": "Brinquedos",
+      "preco": 363.25,
+      "quantidade": 25,
+      "avaliacao": 4.8
+    }
+  ],
+  "total_produtos": 50,
+  "data_geracao": "2023-05-15"
+}
