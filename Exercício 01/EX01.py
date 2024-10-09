@@ -5,6 +5,7 @@ matriz = [
     [7, 8, 9]
 ]
 
-# Exibindo
+# Exibindo a matriz formatada
+print("Matriz 3x3:")
 for linha in matriz:
-    print(linha)
+    print(" | ".join(f"{elemento:^3}" for elemento in linha))
